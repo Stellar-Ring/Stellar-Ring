@@ -6,197 +6,237 @@
     <title>寰星科技有限公司 | Stellar Ring Technology Limited</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        :root{
-            --bg:#000814;--deep:#001233;--accent:#00f5ff;--text:#e0e6ff;
-        }
+        :root{--bg:#000814;--deep:#001233;--accent:#00f5ff;--text:#e0e6ff}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Helvetica Neue',Arial,sans-serif;
-            background:#000;
-            color:var(--text);
-            overflow-x:hidden;
-            line-height:1.6;
-            background:radial-gradient(circle at 50% 50%, #001845 0%, #000814 70%);
-        }
-        /* SpaceX 同款星空粒子 */
+        body{font-family:'Helvetica Neue',Arial,sans-serif;background:#000;color:var(--text);overflow-x:hidden;line-height:1.6;background:radial-gradient(circle at 50% 50%, #001845 0%, #000814 70%)}
         #stars{background:transparent;position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
-        header{
-            position:fixed;top:0;width:100%;z-index:1000;
-            padding:20px 5%;display:flex;justify-content:space-between;align-items:center;
-            background:linear-gradient(to bottom,rgba(0,0,0,0.8) 0%,transparent 100%);
-        }
-        .logo{
-            font-size:28px;font-weight:300;letter-spacing:8px;text-transform:uppercase;
-            color:#fff;
-        }
+        header{position:fixed;top:0;width:100%;z-index:1000;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(0,0,0,0.8) 0%,transparent 100%)}
+        .logo{font-size:28px;font-weight:300;letter-spacing:8px;text-transform:uppercase;color:#fff}
         .logo span{color:var(--accent)}
-        .lang-switch button{
-            background:none;border:none;color:#fff;font-size:14px;margin-left:20px;cursor:pointer;
-            text-transform:uppercase;letter-spacing:2px;transition:0.3s;
-        }
+        .lang-switch button{background:none;border:none;color:#fff;font-size:14px;margin-left:20px;cursor:pointer;text-transform:uppercase;letter-spacing:2px;transition:0.3s}
         .lang-switch button.active{color:var(--accent);font-weight:500}
-        .hero{
-            height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-            text-align:center;position:relative;z-index:1;
-        }
-        .hero h1{
-            font-size:clamp(3rem,10vw,7rem);font-weight:300;letter-spacing:8px;
-            text-transform:uppercase;margin-bottom:20px;
-        }
+        .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;z-index:1}
+        .hero h1{font-size:clamp(3rem,10vw,7rem);font-weight:300;letter-spacing:8px;text-transform:uppercase;margin-bottom:20px}
         .hero h1 span{color:var(--accent);font-weight:500}
-        .hero p{
-            font-size:clamp(1.2rem,4vw,2rem);max-width:900px;margin:30px auto;
-            opacity:0.9;font-weight:300;
-        }
-        .cta{
-            background:transparent;border:2px solid var(--accent);color:var(--accent);
-            padding:15px 50px;font-size:1.1rem;letter-spacing:3px;text-transform:uppercase;
-            cursor:pointer;transition:0.4s;margin-top:40px;
-        }
-        .cta:hover{
-            background:var(--accent);color:#000;box-shadow:0 0 40px rgba(0,245,255,0.6);
-        }
+        .hero p{font-size:clamp(1.2rem,4vw,2rem);max-width:900px;margin:30px auto;opacity:0.9;font-weight:300}
+        .cta{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:15px 50px;font-size:1.1rem;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:0.4s;margin-top:40px}
+        .cta:hover{background:var(--accent);color:#000;box-shadow:0 0 40px rgba(0,245,255,0.6)}
         section{padding:120px 5%;max-width:1400px;margin:0 auto;position:relative;z-index:1}
-        h2{
-            font-size:clamp(2.5rem,6vw,4.5rem);text-align:center;margin-bottom:80px;
-            font-weight:300;letter-spacing:5px;text-transform:uppercase;
-        }
-        .grid{
-            display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:50px;
-        }
-        .card{
-            text-align:center;padding:40px 20px;transition:0.4s;
-            border-bottom:2px solid transparent;
-        }
+        h2{font-size:clamp(2.5rem,6vw,4.5rem);text-align:center;margin-bottom:80px;font-weight:300;letter-spacing:5px;text-transform:uppercase}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:50px}
+        .card{text-align:center;padding:40px 20px;transition:0.4s;border-bottom:2px solid transparent}
         .card:hover{border-color:var(--accent);transform:translateY(-10px)}
         .card i{font-size:4rem;margin-bottom:30px;color:var(--accent)}
-        .contact{
-            background:rgba(0,8,20,0.7);padding:100px 5%;text-align:center;border-radius:20px;
-        }
-        footer{
-            text-align:center;padding:60px 20px;font-size:14px;opacity:0.7;
-        }
-        /* 语言内容 */
+        .steps{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin:3rem 0}
+        .step{display:flex;flex-direction:column;align-items:center;width:200px;background:rgba(255,255,255,0.05);padding:1.5rem;border-radius:8px;text-align:center}
+        .step i{font-size:2rem;margin-bottom:0.5rem}
+        .testimonials .grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+        .testimonial{padding:1rem;background:rgba(0,0,0,0.4);border-radius:8px;margin:1rem;font-style:italic;font-size:0.9rem}
+        .contact{background:rgba(0,8,20,0.7);padding:80px 5%;text-align:center;border-radius:20px;margin:60px 0}
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;max-width:600px;margin:2rem auto}
+        input,textarea{width:100%;padding:1rem;border-radius:8px;border:1px solid rgba(0,245,255,0.3);background:rgba(0,0,0,0.5);color:var(--text);font-size:1rem}
+        footer{text-align:center;padding:60px 20px;font-size:14px;opacity:0.7}
         [lang="en"],[lang="pt"]{display:none}
         .lang-en [lang="en"],.lang-pt [lang="pt"],.lang-zh [lang="zh-CN"]{display:block}
         .lang-en [lang]:not([lang="en"]),.lang-pt [lang]:not([lang="pt"]),.lang-zh [lang]:not([lang="zh-CN"]){display:none}
-        @media(max-width:768px){
-            .hero h1{letter-spacing:4px}
-            .lang-switch button{margin-left:10px;font-size:12px}
-        }
+        @media(max-width:768px){.hero h1{letter-spacing:4px}.lang-switch button{margin-left:10px;font-size:12px}.grid{grid-template-columns:1fr}.steps{flex-direction:column;align-items:center}.step{width:100%;max-width:300px}}
     </style>
 </head>
 <body class="lang-zh">
     <canvas id="stars"></canvas>
-
     <header>
-        <div class="logo">寰星 <span>Stellar Ring</span></div>
+        <div class="logo">Stellar Ring <span lang="zh-CN">寰星</span><span lang="en">Stellar</span><span lang="pt">Estelar</span></div>
         <div class="lang-switch">
             <button onclick="setLang('zh')" class="active">中文</button>
             <button onclick="setLang('en')">EN</button>
             <button onclick="setLang('pt')">PT</button>
         </div>
     </header>
-
     <section class="hero">
         <h1>
             <span lang="zh-CN">寰星科技有限公司</span>
-            <span lang="en">Stellar Ring</span>
-            <span lang="pt">Stellar Ring</span>
+            <span lang="en">Stellar Ring Technology</span>
+            <span lang="pt">Tecnologia Stellar Ring</span>
         </h1>
         <h1 style="font-size:60%;margin-top:-20px">
             <span lang="zh-CN">Stellar Ring Technology Limited</span>
-            <span lang="en">Technology Limited</span>
-            <span lang="pt">Tecnologia Limitada</span>
+            <span lang="en">Limited</span>
+            <span lang="pt">Limitada</span>
         </h1>
         <p>
-            <span lang="zh-CN">全球领先的多云管理与星际算力服务商</span>
-            <span lang="en">Global Leader in Multi-Cloud Management & Interstellar Computing</span>
-            <span lang="pt">Líder Global em Gestão Multi-Cloud e Computação Interestelar</span>
+            <span lang="zh-CN">寰星科技，全球云服务器代理商</span>
+            <span lang="en">Stellar Ring, global cloud server agent</span>
+            <span lang="pt">Stellar Ring, agente global de servidores em nuvem</span>
+        </p>
+        <p>
+            <span lang="zh-CN">爆款云服务器全面来袭</span>
+            <span lang="en">Hot cloud servers fully launched</span>
+            <span lang="pt">Servidores de nuvem quentes lançados completamente</span>
         </p>
         <button class="cta" onclick="location.href='#contact'">
-            <span lang="zh-CN">立即联系</span>
+            <span lang="zh-CN">立即咨询</span>
             <span lang="en">Contact</span>
             <span lang="pt">Contato</span>
         </button>
     </section>
-
-    <section>
+    <section id="about">
         <h2>
-            <span lang="zh-CN">核心能力</span>
-            <span lang="en">Capabilities</span>
-            <span lang="pt">Capacidades</span>
+            <span lang="zh-CN">关于寰星</span>
+            <span lang="en">About Stellar Ring</span>
+            <span lang="pt">Sobre Stellar Ring</span>
         </h2>
+        <p style="font-size:1.2rem;max-width:900px;margin:0 auto 3rem">
+            <span lang="zh-CN">寰星科技代理商提供全世界最安全的云服务器。提供技术支持和解决方案。为你提供一站式的云端服务</span>
+            <span lang="en">Stellar Ring agent provides the world's safest cloud servers. Offers technical support and solutions. Provides one-stop cloud services</span>
+            <span lang="pt">O agente Stellar Ring fornece os servidores em nuvem mais seguros do mundo. Oferece suporte técnico e soluções. Fornece serviços em nuvem de mão única</span>
+        </p>
         <div class="grid">
-            <div class="card"><i class="fas fa-cloud"></i><h3>AWS / Alibaba Cloud</h3><p lang="zh-CN">全球官方总代理 · 一键开户</p><p lang="en">Official Global Partner</p><p lang="pt">Parceiro Global Oficial</p></div>
-            <div class="card"><i class="fas fa-shield-alt"></i><h3>Cloudflare Enterprise</h3><p lang="zh-CN">企业级 DDoS + WAF + CDN</p><p lang="en">Enterprise-grade Security</p><p lang="pt">Segurança Empresarial</p></div>
-            <div class="card"><i class="fas fa-satellite"></i><h3>边缘算力网络</h3><p lang="zh-CN">Zenlayer · Gcore · Edgenext</p><p lang="en">Global Edge Network</p><p lang="pt">Rede Edge Global</p></div>
+            <div class="card">
+                <i class="fas fa-globe"></i>
+                <h3>
+                    <span lang="zh-CN">国际云</span>
+                    <span lang="en">International Cloud</span>
+                    <span lang="pt">Nuvem Internacional</span>
+                </h3>
+                <p lang="zh-CN">阿里云、腾讯云、华为云等</p><p lang="en">Alibaba Cloud, Tencent Cloud, Huawei Cloud, etc.</p><p lang="pt">Alibaba Cloud, Tencent Cloud, Huawei Cloud, etc.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud"></i>
+                <h3>
+                    <span lang="zh-CN">海外云</span>
+                    <span lang="en">Overseas Cloud</span>
+                    <span lang="pt">Nuvem Ultramarina</span>
+                </h3>
+                <p lang="zh-CN">谷歌云、亚马逊云、微软云等均有深度合作</p><p lang="en">Google Cloud, Amazon Cloud, Microsoft Cloud, etc., with deep cooperation</p><p lang="pt">Google Cloud, Amazon Cloud, Microsoft Cloud, etc., com cooperação profunda</p>
+            </div>
         </div>
     </section>
-
+    <section class="benefits">
+        <h2>
+            <span lang="zh-CN">为什么选择寰星？</span>
+            <span lang="en">Why Choose Stellar Ring?</span>
+            <span lang="pt">Por Que Escolher Stellar Ring?</span>
+        </h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3><span lang="zh-CN">100% 安全</span><span lang="en">100% Secure</span><span lang="pt">100% Seguro</span></h3>
+                <p lang="zh-CN">可支持任何行业，无额外条件</p><p lang="en">Supports any industry, no additional conditions</p><p lang="pt">Suporta qualquer indústria, sem condições adicionais</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-headset"></i>
+                <h3><span lang="zh-CN">365天技术支持</span><span lang="en">365-Day Support</span><span lang="pt">Suporte 365 Dias</span></h3>
+                <p lang="zh-CN">长期稳定使用，技术团队打造最佳用户体验</p><p lang="en">Long-term stable use, technical team builds best user experience</p><p lang="pt">Uso estável a longo prazo, equipe técnica constrói a melhor experiência do usuário</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-credit-card"></i>
+                <h3><span lang="zh-CN">官方总代理</span><span lang="en">Official Agent</span><span lang="pt">Agente Oficial</span></h3>
+                <p lang="zh-CN">提供匿名账号，无需信用卡，支付方式方便</p><p lang="en">Provides anonymous accounts, no credit card, convenient payment</p><p lang="pt">Fornece contas anônimas, sem cartão de crédito, pagamento conveniente</p>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <h2>
+            <span lang="zh-CN">合作伙伴</span>
+            <span lang="en">Partners</span>
+            <span lang="pt">Parceiros</span>
+        </h2>
+        <div class="grid">
+            <div class="card"><i class="fab fa-aws"></i><h3>AWS</h3><p lang="zh-CN">亚马逊云</p><p lang="en">Amazon Cloud</p><p lang="pt">Nuvem Amazon</p></div>
+            <div class="card"><i class="fas fa-cloud"></i><h3>Alibaba Cloud</h3><p lang="zh-CN">阿里云</p><p lang="en">Alibaba Cloud</p><p lang="pt">Alibaba Cloud</p></div>
+            <div class="card"><i class="fas fa-tencent-weixin"></i><h3>Tencent Cloud</h3><p lang="zh-CN">腾讯云</p><p lang="en">Tencent Cloud</p><p lang="pt">Tencent Cloud</p></div>
+            <div class="card"><i class="fab fa-google"></i><h3>Google Cloud</h3><p lang="zh-CN">谷歌云</p><p lang="en">Google Cloud</p><p lang="pt">Google Cloud</p></div>
+        </div>
+    </section>
+    <section class="purchase">
+        <h2>
+            <span lang="zh-CN">购买流程</span>
+            <span lang="en">Purchase Process</span>
+            <span lang="pt">Processo de Compra</span>
+        </h2>
+        <ol class="steps">
+            <li class="step">
+                <i class="fas fa-phone"></i>
+                <h4><span lang="zh-CN">联系客服</span><span lang="en">Contact Service</span><span lang="pt">Contato com Serviço</span></h4>
+                <p lang="zh-CN">点击按钮咨询适合的服务器</p><p lang="en">Click to inquire about suitable server</p><p lang="pt">Clique para consultar servidor adequado</p>
+            </li>
+            <li class="step">
+                <i class="fas fa-credit-card"></i>
+                <h4><span lang="zh-CN">充值账户</span><span lang="en">Recharge Account</span><span lang="pt">Recarregar Conta</span></h4>
+                <p lang="zh-CN">了解需求后充值服务器账户</p><p lang="en">Recharge after understanding needs</p><p lang="pt">Recarregar após entender necessidades</p>
+            </li>
+            <li class="step">
+                <i class="fas fa-check-circle"></i>
+                <h4><span lang="zh-CN">开户成功</span><span lang="en">Account Success</span><span lang="pt">Conta Bem-Sucedida</span></h4>
+                <p lang="zh-CN">立即使用云服务器，下单不怕错过</p><p lang="en">Immediately use cloud server, order without missing</p><p lang="pt">Use servidor em nuvem imediatamente, pedido sem perder</p>
+            </li>
+        </ol>
+    </section>
+    <section class="testimonials">
+        <h2>
+            <span lang="zh-CN">客户反馈</span>
+            <span lang="en">Customer Feedback</span>
+            <span lang="pt">Feedback do Cliente</span>
+        </h2>
+        <div class="grid">
+            <div class="testimonial">
+                <span lang="zh-CN">"回复快，价格优惠！客服态度佳！" - 中国企业</span>
+                <span lang="en">"Fast response, preferential prices! Good customer service!" - Chinese Enterprise</span>
+                <span lang="pt">"Resposta rápida, preços preferenciais! Bom atendimento!" - Empresa Chinesa</span>
+            </div>
+            <div class="testimonial">
+                <span lang="zh-CN">"DK Cloud 销售团队态度好！回复快！!" - 乌克兰客户</span>
+                <span lang="en">"Good attitude from DK Cloud's sales team! Fast response!!" - Ukraine Customer</span>
+                <span lang="pt">"Boa atitude da equipe de vendas do DK Cloud! Resposta rápida!!" - Cliente da Ucrânia</span>
+            </div>
+        </div>
+    </section>
     <section id="contact" class="contact">
         <h2>
             <span lang="zh-CN">联系我们</span>
-            <span lang="en">Contact</span>
+            <span lang="en">Contact Us</span>
             <span lang="pt">Contato</span>
         </h2>
-        <p style="font-size:1.3rem;max-width:800px;margin:0 auto 40px">
-            <span lang="zh-CN">UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET,<br>SAN PO KONG, KOWLOON, HONG KONG</span>
-            <span lang="en">UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET,<br>SAN PO KONG, KOWLOON, HONG KONG</span>
-            <span lang="pt">UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET,<br>SAN PO KONG, KOWLOON, HONG KONG</span>
+        <div class="contact-grid">
+            <input type="text" placeholder="姓名 / Name / Nome">
+            <input type="tel" placeholder="电话 / Phone / Telefone">
+            <input type="email" placeholder="邮箱 / Email / E-mail">
+            <textarea rows="4" placeholder="需求描述 / Requirements / Requisitos"></textarea>
+            <button class="cta" style="width:100%;margin-top:1rem">发送 / Send / Enviar</button>
+        </div>
+        <p style="font-size:1.3rem;margin-top:2rem">
+            <span lang="zh-CN">UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET, SAN PO KONG, KOWLOON, HONG KONG</span>
+            <span lang="en">UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET, SAN PO KONG, KOWLOON, HONG KONG</span>
+            <span lang="pt">UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET, SAN PO KONG, KOWLOON, HONG KONG</span>
         </p>
-        <p style="font-size:2rem;margin:30px 0">
-            Email: <a href="mailto:alessio.tsui@gmail.com" style="color:var(--accent)">alessio.tsui@gmail.com</a>
+        <p style="font-size:1.5rem;margin-top:1rem">
+            <span lang="zh-CN">邮箱：alessio.tsui@gmail.com</span>
+            <span lang="en">Email: alessio.tsui@gmail.com</span>
+            <span lang="pt">E-mail: alessio.tsui@gmail.com</span>
         </p>
     </section>
-
     <footer>
         © 2025 
         <span lang="zh-CN">寰星科技有限公司 Stellar Ring Technology Limited</span>
         <span lang="en">Stellar Ring Technology Limited</span>
-        <span lang="pt">Stellar Ring Tecnologia Limitada</span>
-        • All Rights Reserved
+        <span lang="pt">Stellar Ring Technology Limited</span>
+        All Rights Reserved
     </footer>
-
     <script>
-        // SpaceX 同款星空粒子
+        // 星空粒子动画
         const canvas = document.getElementById('stars');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         const stars = [];
         for(let i=0;i<300;i++){
-            stars.push({
-                x:Math.random()*canvas.width,
-                y:Math.random()*canvas.height,
-                r:Math.random()*1.5,
-                speed:Math.random()*0.5+0.1
-            });
+            stars.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5,speed:Math.random()*0.5+0.1});
         }
-        function draw(){
-            ctx.clearRect(0,0,canvas.width,canvas.height);
-            ctx.fillStyle = '#fff';
-            stars.forEach(s=>{
-                ctx.beginPath();
-                ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-                ctx.fill();
-                s.x += s.speed;
-                if(s.x > canvas.width) s.x = 0;
-            });
-            requestAnimationFrame(draw);
-        }
+        function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#fff';stars.forEach(s=>{ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();s.x+=s.speed;if(s.x>canvas.width)s.x=0});requestAnimationFrame(draw)}
         draw();
-        window.addEventListener('resize',()=>{
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
+        window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight});
         // 语言切换
-        function setLang(lang){
-            document.body.className = 'lang-'+lang;
-            document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
-            document.querySelector(`button[onclick="setLang('${lang}')"]`).classList.add('active');
-        }
+        function setLang(lang){document.body.className='lang-'+lang;document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));document.querySelector(`button[onclick="setLang('${lang}')"]`).classList.add('active')}
     </script>
 </body>
 </html>
