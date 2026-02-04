@@ -39,7 +39,6 @@
         input,textarea,button{width:100%;padding:14px;border-radius:8px;border:1px solid rgba(0,245,255,0.3);background:rgba(0,0,0,0.5);color:var(--text);font-size:1rem}
         button.cta{margin-top:10px}
         footer{text-align:center;padding:40px 20px;font-size:13px;opacity:0.7}
-
         /* 关键：手机端专属优化 */
         @media (max-width:768px){
             header{padding:12px 4%}
@@ -61,7 +60,6 @@
 </head>
 <body class="lang-zh">
 <canvas id="stars"></canvas>
-
 <header>
     <div class="logo">Stellar <span lang="zh-CN">寰星</span><span lang="en">Ring</span><span lang="pt">Ring</span></div>
     <div class="lang-switch">
@@ -70,7 +68,6 @@
         <button onclick="setLang('pt')">PT</button>
     </div>
 </header>
-
 <section class="hero">
     <h1><span lang="zh-CN">寰星科技有限公司</span><span lang="en">Stellar Ring</span><span lang="pt">Stellar Ring</span></h1>
     <h1 style="font-size:55%;margin-top:-10px">
@@ -85,22 +82,115 @@
         <span lang="zh-CN">立即咨询</span><span lang="en">Contact</span><span lang="pt">Contato</span>
     </button>
 </section>
-
 <!-- 以下内容保持不变，只做了手机端间距和字体优化 -->
-<section id="about"><h2><span lang="zh-CN">关于寰星</span><span lang="en">About</span><span lang="pt">Sobre</span></h2>
-    <p style="font-size:1.1rem;max-width:900px;margin:0 auto 2.5rem">
-        <span lang="zh-CN">寰星科技代理商提供全世界最安全的云服务器。提供技术支持和解决方案。为你提供一站式的云端服务</span>
-        <span lang="en">Stellar Ring provides the world's safest cloud servers with one-stop service.</span>
-        <span lang="pt">Stellar Ring fornece os servidores em nuvem mais seguros do mundo com serviço completo.</span>
-    </p>
+<section id="about"><h2><span lang="zh-CN">主营产品与服务</span><span lang="en">Products & Services</span><span lang="pt">Produtos & Serviços</span></h2>
     <div class="grid">
-        <div class="card"><i class="fas fa-globe"></i><h3><span lang="zh-CN">国际云</span><span lang="en">International Cloud</span><span lang="pt">Nuvem Internacional</span></h3>
-            <p lang="zh-CN">阿里云、腾讯云、华为云等</p><p lang="en">Alibaba/Tencent/Huawei Cloud</p><p lang="pt">Alibaba/Tencent/Huawei Cloud</p></div>
-        <div class="card"><i class="fas fa-cloud"></i><h3><span lang="zh-CN">海外云</span><span lang="en">Overseas Cloud</span><span lang="pt">Nuvem Ultramarina</span></h3>
-            <p lang="zh-CN">谷歌云、亚马逊云、微软云等</p><p lang="en">Google/AWS/Azure</p><p lang="pt">Google/AWS/Azure</p></div>
+        <div class="card"><i class="fas fa-server"></i><h3><span lang="zh-CN">裸金属服务器</span><span lang="en">Bare Metal Servers</span><span lang="pt">Servidores Bare Metal</span></h3>
+            <p lang="zh-CN">专用物理服务器，支持全球热门区域部署。高性能无虚拟化损耗，100% 独享资源。</p>
+            <p lang="en">Dedicated physical servers for global key regions. High-performance, 100% exclusive resources.</p>
+            <p lang="pt">Servidores físicos dedicados para regiões chave globais. Alto desempenho, 100% recursos exclusivos.</p>
+            <ul>
+                <li lang="zh-CN">低延迟边缘计算</li>
+                <li lang="zh-CN">AI/大数据优化</li>
+                <li lang="en">Low-latency edge computing</li>
+                <li lang="en">AI/big data optimization</li>
+                <li lang="pt">Computação de borda de baixa latência</li>
+                <li lang="pt">Otimização AI/big data</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-microchip"></i><h3><span lang="zh-CN">边缘 GPU 计算</span><span lang="en">Edge GPU Computing</span><span lang="pt">Computação GPU na Borda</span></h3>
+            <p lang="zh-CN">AI 就绪 GPU 集群，部署在用户最近的边缘节点，实现毫秒级推理与训练。</p>
+            <p lang="en">AI-ready GPU clusters deployed closest to users for millisecond inference & training.</p>
+            <p lang="pt">Clusters GPU prontos para AI implantados mais próximos aos usuários para inferência e treinamento em milissegundos.</p>
+            <ul>
+                <li lang="zh-CN">可扩展低延迟 AI 工作负载</li>
+                <li lang="zh-CN">近端用户训练/推理</li>
+                <li lang="en">Scalable low-latency AI workloads</li>
+                <li lang="en">Near-user training/inference</li>
+                <li lang="pt">Cargas de trabalho AI de baixa latência escaláveis</li>
+                <li lang="pt">Treinamento/inferência próximo ao usuário</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-building"></i><h3><span lang="zh-CN">IDC 机房服务</span><span lang="en">IDC Data Center Services</span><span lang="pt">Serviços de Data Center IDC</span></h3>
+            <p lang="zh-CN">全球100+ IDC资源，亚太及欧美覆盖，传输带宽超30 TBPS，提供本地互联网接入。</p>
+            <p lang="en">Over 100 global IDC resources across APAC & Europe-America, transmission bandwidth >30 TBPS.</p>
+            <p lang="pt">Mais de 100 recursos IDC globais em APAC e Europa-América, largura de banda de transmissão >30 TBPS.</p>
+            <ul>
+                <li lang="zh-CN">50+国家覆盖</li>
+                <li lang="zh-CN">服务器托管与应用部署</li>
+                <li lang="en">50+ Countries coverage</li>
+                <li lang="en">Server colocation & deployment</li>
+                <li lang="pt">Cobertura em mais de 50 países</li>
+                <li lang="pt">Colocação de servidores e implantação</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-network-wired"></i><h3><span lang="zh-CN">SD-WAN 方案</span><span lang="en">SD-WAN Solutions</span><span lang="pt">Soluções SD-WAN</span></h3>
+            <p lang="zh-CN">200+全球POP点，企业多分支快速组网，一键部署低时延虚拟专网。</p>
+            <p lang="en">200+ global POP points, fast multi-branch networking, low-latency virtual private network.</p>
+            <p lang="pt">Mais de 200 pontos POP globais, rede rápida multi-filial, rede privada virtual de baixa latência.</p>
+            <ul>
+                <li lang="zh-CN">QoS智能带宽管理</li>
+                <li lang="zh-CN">总部-分支-SaaS 加速</li>
+                <li lang="en">QoS bandwidth management</li>
+                <li lang="en">HQ-branch-SaaS acceleration</li>
+                <li lang="pt">Gerenciamento inteligente de largura de banda QoS</li>
+                <li lang="pt">Aceleração HQ-filial-SaaS</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-globe"></i><h3><span lang="zh-CN">IP 传输网络</span><span lang="en">IP Transit Networking</span><span lang="pt">Rede IP Transit</span></h3>
+            <p lang="zh-CN">高性能互联网接入，优化全球路由连接。</p>
+            <p lang="en">High-performance internet access with optimized global routing.</p>
+            <p lang="pt">Acesso à internet de alto desempenho com roteamento global otimizado.</p>
+            <ul>
+                <li lang="zh-CN">高带宽边缘部署</li>
+                <li lang="zh-CN">实时监控 + <15min 响应</li>
+                <li lang="en">High-bandwidth edge deployments</li>
+                <li lang="en">Real-time monitoring & support</li>
+                <li lang="pt">Implantações de borda de alta largura de banda</li>
+                <li lang="pt">Monitoramento em tempo real + resposta <15min</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-envelope"></i><h3><span lang="zh-CN">实时短信业务</span><span lang="en">Real-time SMS Business</span><span lang="pt">Negócios SMS em Tempo Real</span></h3>
+            <p lang="zh-CN">媒体 PaaS 集成 CDN，毫秒级全球短信交付。</p>
+            <p lang="en">Media PaaS with CDN integration for millisecond global SMS delivery.</p>
+            <p lang="pt">Media PaaS com integração CDN para entrega global de SMS em milissegundos.</p>
+            <ul>
+                <li lang="zh-CN">OTP、营销、视频流</li>
+                <li lang="zh-CN">超低延迟互动通知</li>
+                <li lang="en">OTP, marketing, video streaming</li>
+                <li lang="en">Ultra-low latency interactions</li>
+                <li lang="pt">OTP, marketing, streaming de vídeo</li>
+                <li lang="pt">Interações de ultra-baixa latência</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-robot"></i><h3><span lang="zh-CN">AI 智能业务</span><span lang="en">AI Intelligent Business</span><span lang="pt">Negócios Inteligentes de IA</span></h3>
+            <p lang="zh-CN">LLM 驱动的 AI Agents，企业级自定义智能助手。</p>
+            <p lang="en">LLM-powered AI Agents for enterprise custom intelligent assistants.</p>
+            <p lang="pt">Agentes AI impulsionados por LLM para assistentes inteligentes personalizados empresariais.</p>
+            <ul>
+                <li lang="zh-CN">自动化工作流集成</li>
+                <li lang="zh-CN">客服助手、数据分析</li>
+                <li lang="en">Automated workflow integration</li>
+                <li lang="en">Customer assistants & data analysis</li>
+                <li lang="pt">Integração de fluxo de trabalho automatizado</li>
+                <li lang="pt">Assistentes de cliente e análise de dados</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-cloud-download-alt"></i><h3><span lang="zh-CN">全球CDN & 边缘节点</span><span lang="en">Global CDN & Edge Nodes</span><span lang="pt">CDN Global & Nós de Borda</span></h3>
+            <p lang="zh-CN">代理全球领先CDN与边缘计算节点，提供低延迟加速与分发服务，覆盖 3000+ PoPs。</p>
+            <p lang="en">Reseller for leading global CDN & edge nodes, low-latency acceleration, 3000+ PoPs coverage.</p>
+            <p lang="pt">Revendedor de CDN global líder e nós de borda, aceleração de baixa latência, cobertura de 3000+ PoPs.</p>
+            <ul>
+                <li lang="zh-CN">多云融合纳管</li>
+                <li lang="zh-CN">资源调配灵活</li>
+                <li lang="en">Multi-cloud integration</li>
+                <li lang="en">Flexible resource allocation</li>
+                <li lang="pt">Integração multi-nuvem</li>
+                <li lang="pt">Alocação flexível de recursos</li>
+            </ul>
+        </div>
     </div>
 </section>
-
 <section class="benefits"><h2><span lang="zh-CN">为什么选择寰星？</span><span lang="en">Why Choose Us?</span><span lang="pt">Por Que Nós?</span></h2>
     <div class="grid">
         <div class="card"><i class="fas fa-shield-alt"></i><h3>100% <span lang="zh-CN">安全</span><span lang="en">Secure</span><span lang="pt">Seguro</span></h3></div>
@@ -108,16 +198,50 @@
         <div class="card"><i class="fas fa-credit-card"></i><h3><span lang="zh-CN">官方总代理</span><span lang="en">Official Agent</span><span lang="pt">Agente Oficial</span></h3></div>
     </div>
 </section>
-
-<section class="partners"><h2><span lang="zh-CN">合作伙伴</span><span lang="en">Partners</span><span lang="pt">Parceiros</span></h2>
+<section class="partners"><h2><span lang="zh-CN">平台优势</span><span lang="en">Platform Advantages</span><span lang="pt">Vantagens da Plataforma</span></h2>
     <div class="grid">
-        <div class="card"><i class="fab fa-aws"></i><h3>AWS</h3></div>
-        <div class="card"><i class="fas fa-cloud"></i><h3>Alibaba Cloud</h3></div>
-        <div class="card"><i class="fas fa-tencent-weixin"></i><h3>Tencent Cloud</h3></div>
-        <div class="card"><i class="fab fa-google"></i><h3>Google Cloud</h3></div>
+        <div class="card"><i class="fas fa-globe"></i><h3><span lang="zh-CN">全球覆盖赋能</span><span lang="en">Global Coverage</span><span lang="pt">Cobertura Global</span></h3>
+            <ul>
+                <li lang="zh-CN">27地域84可用区，确保高SLA与可靠性</li>
+                <li lang="zh-CN">助力企业出海数字化，边缘部署优化</li>
+                <li lang="en">27 regions/84 AZs for high SLA/reliability</li>
+                <li lang="en">Empowers enterprise global digitalization</li>
+                <li lang="pt">27 regiões/84 AZs para alta SLA/confiabilidade</li>
+                <li lang="pt">Capacita digitalização global empresarial</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-money-bill-wave"></i><h3><span lang="zh-CN">快速充值与授信</span><span lang="en">Fast Recharge</span><span lang="pt">Recarga Rápida</span></h3>
+            <ul>
+                <li lang="zh-CN">支持多币种、无信用卡绑定，即时到账</li>
+                <li lang="zh-CN">余额预警Telegram通知，财务流水管理</li>
+                <li lang="en">Multi-currency, no card needed; instant recharge</li>
+                <li lang="en">Telegram alerts, financial flow management</li>
+                <li lang="pt">Multi-moeda, sem cartão necessário; recarga instantânea</li>
+                <li lang="pt">Alertas Telegram, gerenciamento de fluxo financeiro</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-tools"></i><h3><span lang="zh-CN">自助管理高效</span><span lang="en">Efficient Self-Mgmt</span><span lang="pt">Gerenciamento Eficiente</span></h3>
+            <ul>
+                <li lang="zh-CN">一键查询消费、动态预算控制、分钟级同步</li>
+                <li lang="zh-CN">降低维运成本，多云融合纳管</li>
+                <li lang="en">One-click consumption query, minute-sync</li>
+                <li lang="en">Reduce ops costs, multi-cloud integration</li>
+                <li lang="pt">Consulta de consumo com um clique, sincronização em minutos</li>
+                <li lang="pt">Reduz custos de operações, integração multi-nuvem</li>
+            </ul>
+        </div>
+        <div class="card"><i class="fas fa-headset"></i><h3><span lang="zh-CN">专业服务支持</span><span lang="en">Pro Services</span><span lang="pt">Serviços Profissionais</span></h3>
+            <ul>
+                <li lang="zh-CN">云迁移、成本优化、安全规划、售前/售后团队</li>
+                <li lang="zh-CN">AI/边缘/SMS 集成咨询，化繁为简</li>
+                <li lang="en">Cloud migration, cost optimization, pro team</li>
+                <li lang="en">AI/edge/SMS integration consulting</li>
+                <li lang="pt">Migração para nuvem, otimização de custos, equipe pro</li>
+                <li lang="pt">Consultoria de integração AI/borda/SMS</li>
+            </ul>
+        </div>
     </div>
 </section>
-
 <section class="purchase"><h2><span lang="zh-CN">购买流程</span><span lang="en">Purchase Process</span><span lang="pt">Processo</span></h2>
     <ol class="steps">
         <li class="step"><i class="fas fa-phone"></i><h4><span lang="zh-CN">联系客服</span><span lang="en">Contact</span><span lang="pt">Contato</span></h4></li>
@@ -125,7 +249,6 @@
         <li class="step"><i class="fas fa-check-circle"></i><h4><span lang="zh-CN">开户成功</span><span lang="en">Done</span><span lang="pt">Concluído</span></h4></li>
     </ol>
 </section>
-
 <section id="contact" class="contact">
     <h2><span lang="zh-CN">联系我们</span><span lang="en">Contact Us</span><span lang="pt">Contato</span></h2>
     <div class="contact-grid">
@@ -135,16 +258,8 @@
         <textarea rows="4" placeholder="需求描述 / Requirements / Requisitos"></textarea>
         <button class="cta">发送 / Send / Enviar</button>
     </div>
-    <p style="margin-top:30px;font-size:1rem">
-        UNIT D3, 11/F, LUK HOP IND BUILDING, NO.8 LUK HOP STREET,<br>SAN PO KONG, KOWLOON, HONG KONG
-    </p>
-    <p style="margin-top:15px;font-size:1.2rem">
-        Email: <a href="mailto:alessio.tsui@gmail.com" style="color:var(--accent)">alessio.tsui@gmail.com</a>
-    </p>
 </section>
-
 <footer>© 2025 Stellar Ring Technology Limited All Rights Reserved</footer>
-
 <script>
 // 星空 + 语言切换（保持不变）
 const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
